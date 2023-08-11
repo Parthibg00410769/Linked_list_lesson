@@ -71,6 +71,16 @@ class Linked_list:
             self.head = new_node
         else:
             print("Linked list is not empty!")
+    #removing the Nodes from a linked list(beginning, middle, after)
+
+    def remove_begin(self):
+        if self.head is None:
+            print("LList is empty so we cannot delete anything!")
+            return
+        else:
+            self.head = self.head.ref
+
+
 
 
 
@@ -85,4 +95,6 @@ ll1.print_ln()
 ll1.add_after(69, 10)
 ll1.add_before(555,69)
 ll1.insert_empty(333)
+ll1.print_ln()
+ll1.remove_begin()
 ll1.print_ln()
