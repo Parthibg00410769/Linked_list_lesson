@@ -33,6 +33,15 @@ class doublyLL:
             self.head = new_node
         else:
             print("Linked list is not empty!")
+    def insert_begin(self,data,x):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+        else:
+            new_node.ref = self.head
+            self.head.prev = new_node
+            self.head = new_node
+
 
 ll2 = doublyLL()
 ll2.print_LL_Reverse()
