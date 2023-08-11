@@ -91,6 +91,25 @@ class Linked_list:
                 n = n.ref
             n.ref = None
 
+    def remove_any(self,x):
+        if self.head is None:
+            print("Cannot delete since LL is empty!")
+
+        if x==self.head.data:
+            self.head = self.head.ref
+            return
+        n = self.head
+        while n.ref is not None:
+            if x==n.ref.data:
+                break
+            n = n.ref
+        if n.ref is None:
+            print("Invalid Node! Give a valid Input")
+        else:
+            n.ref = n.ref.ref
+
+
+
 
 
 
@@ -104,5 +123,6 @@ ll1.add_end(55)
 
 ll1.add_begin(122)
 ll1.print_ln()
-ll1.remove_last()
+ll1.remove_any(10)
+#ll1.remove_last()
 ll1.print_ln()
